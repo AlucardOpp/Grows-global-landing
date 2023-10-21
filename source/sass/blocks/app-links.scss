@@ -1,0 +1,44 @@
+.app-links {
+  display: none;
+
+  max-width: 100%;
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+
+    transition: opacity $trans-default;
+    transform: translateZ(0);
+
+    &:not(:last-of-type) {
+      margin-right: size(25px);
+
+      @include vp-767 {
+        margin-right: 4px;
+      }
+    }
+
+    @include hover {
+      opacity: 0.8;
+    }
+  }
+
+  svg {
+    height: size(65px);
+    width: auto;
+
+    @include vp-2399 {
+      height: 65px;
+    }
+
+    @include vp-767 {
+      height: 44px;
+      max-width: 100%;
+    }
+  }
+}

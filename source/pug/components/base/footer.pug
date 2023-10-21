@@ -1,0 +1,8 @@
+mixin footer(footerMods)
+  footer.footer(class=footerMods)
+    .container
+      h2.footer__title!= local.footer.title
+      +socials().footer__socials
+      +app-links().footer__store
+      p.footer__descr!= local.footer.descr
+      span.footer__copy!= local.footer.copy

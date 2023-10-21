@@ -1,0 +1,280 @@
+.full-story {
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+  &__slider {
+    width: 100%;
+  }
+
+  &__slider-wrap {
+    height: auto;
+    min-height: 100%;
+  }
+
+  &__slide {
+    display: flex;
+    align-items: center;
+    height: auto;
+    overflow: hidden;
+  }
+
+  &__slide-wrap {
+    height: 100%;
+    max-width: 1490px;
+    max-width: 1920px;
+    padding: size(324px) 260px size(446px);
+    margin: 0 auto;
+    border-bottom: 1px solid transparent;
+
+    @include vp-1919 {
+      padding: 80px 200px 300px;
+    }
+
+    @include vp-1919 {
+      padding: 60px 100px 170px;
+    }
+
+    @include vp-767 {
+      padding: 75px 27px 200px;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: size(100px);
+    font-weight: 600;
+    font-size: size(80px);
+    line-height: 100%;
+    text-align: center;
+
+    @include vp-1919 {
+      margin-bottom: 80px;
+      font-size: 70px;
+    }
+
+    @include vp-1919 {
+      margin-bottom: 60px;
+      font-size: 60px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 28px;
+      font-size: 35px;
+    }
+  }
+
+  &__text {
+    @include vp-767 {
+      text-align: center;
+    }
+
+    p {
+      margin: 0;
+      font-size: 40px;
+      line-height: 100%;
+
+      @include vp-1919 {
+        margin-bottom: 25px;
+        font-size: 30px;
+      }
+
+      @include vp-1919 {
+        font-size: 22px;
+      }
+
+      @include vp-767 {
+        margin-bottom: 15px;
+        font-size: 15px;
+      }
+
+      & ~ p {
+        margin-top: size(40px);
+
+        @include vp-1919 {
+          margin-top: 22px;
+        }
+
+        @include vp-767 {
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+
+  &__footer {
+    margin-top: size(75px);
+
+    @include vp-1919 {
+      margin-top: 35px;
+    }
+
+    @include vp-767 {
+      margin-top: 20px;
+    }
+
+    p {
+      margin: 0;
+      text-align: right;
+      font-size: 40px;
+      line-height: 100%;
+
+      @include vp-1919 {
+        font-size: 22px;
+      }
+
+      @include vp-767 {
+        font-size: 15px;
+      }
+    }
+  }
+
+  &__name {
+    font-weight: 600;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 15%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: center;
+    margin-right: size(-19px);
+    margin-top: size(147px);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    position: fixed;
+    bottom: size(216px);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+
+    .btn {
+      justify-content: center;
+      margin-right: size(19px);
+      margin-top: 19px;
+      text-align: center;
+      white-space: nowrap;
+      width: size(400px);
+
+      @include vp-1919 {
+        padding: 14px 50px;
+        font-size: 20px;
+        width: 300px;
+      }
+
+      @include vp-767 {
+        width: 196px;
+        margin-top: 14px;
+        margin-right: 0;
+        padding: 12px 31px;
+        font-size: 16px;
+      }
+    }
+
+    @include vp-1919 {
+      bottom: 150px;
+    }
+
+    @include vp-1919 {
+      bottom: 47px;
+    }
+
+    @include vp-767{
+      flex-direction: column-reverse;
+      bottom: 42px;
+
+
+      position: fixed;
+      // bottom: size(216px);
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      // display: block;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: size(65px);
+    height: size(65px);
+    padding: 0;
+    background-color: rgba($color-default-white, 0.7);
+    border-radius: 50%;
+    border: none;
+    transition: opacity $trans-default;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: 0;
+    -webkit-tap-highlight-color: $color-transparent;
+    position: absolute;
+    top: 50%;
+    left: size(63px);
+    z-index: 1;
+    cursor: pointer;
+
+    @include vp-1919 {
+      width: 50px;
+      height: 50px;
+      left: 20px;
+    }
+
+    @include vp-767 {
+      width: 40px;
+      height: 40px;
+      left: 3px;
+    }
+
+    svg {
+      width: size(26px);
+      height: size(24px);
+
+      @include vp-1919 {
+        width: 20px;
+        height: 18px;
+      }
+
+      @include vp-767 {
+        width: 17px;
+        height: 16px;
+      }
+    }
+
+    &--next {
+      left: auto;
+      right: size(63px);
+
+      @include vp-1919 {
+        left: auto;
+        right: 20px;
+      }
+
+      @include vp-767 {
+        left: auto;
+        right: 3px;
+      }
+    }
+
+    @include hover {
+      opacity: 0.7;
+    }
+  }
+}

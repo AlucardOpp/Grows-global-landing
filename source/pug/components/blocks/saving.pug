@@ -1,0 +1,96 @@
+mixin saving()
+  -
+    const data = [
+      {
+        //- title: "Your kid&rsquo;s capital in&nbsp;18&nbsp;years may reach:",
+        valueUnit: "&euro;",
+        buttons: [
+          {
+            value: "30",
+            dataGrows: "36 926",
+            dataBank: "6 762",
+          },
+          {
+            value: "50",
+            dataGrows: "61 544",
+            dataBank: "11 271",
+            isActive: true,
+          },
+          {
+            value: "100",
+            dataGrows: "123 089",
+            dataBank: "22 542",
+          },
+          {
+            value: "500",
+            dataGrows: "615 447",
+            dataBank: "112 714",
+          },
+          {
+            value: "1 000",
+            dataGrows: "1 230 895",
+            dataBank: "225 429",
+          },
+        ]
+      },
+      {
+        //- title: "Building a&nbsp;500k EUR retirement fund may take you:",
+        valueUnit: "years",
+        buttons: [
+          {
+            value: "30",
+            dataGrows: "27",
+            dataBank: "416",
+          },
+          {
+            value: "50",
+            dataGrows: "25",
+            dataBank: "330",
+            isActive: true,
+          },
+          {
+            value: "100",
+            dataGrows: "22",
+            dataBank: "226",
+          },
+          {
+            value: "500",
+            dataGrows: "16",
+            dataBank: "70",
+          },
+          {
+            value: "1 000",
+            dataGrows: "14",
+            dataBank: "38",
+          },
+        ]
+      },
+    ]
+  section.saving
+    .container
+      h1.title!= local.saving.title
+      .saving__wrapper
+        .saving__tabs.tabs(data-tabs='parent', data-delay='300')
+          .saving__controls.tabs__controls(data-tabs='controls')
+            button.saving__control.btn.btn--toggle.is-active(type='button', data-tabs='control')!= local.saving.tabs[0].btn
+            button.saving__control.btn.btn--toggle(type='button', data-tabs='control')!= local.saving.tabs[1].btn
+          .saving__content.tabs__content(data-tabs='content')
+            each item, index in data
+              .saving__element.tabs__element(data-tabs='element')
+                .saving__slider.swiper
+                  .saving__slider-wrapper.swiper-wrapper
+                    each button in item.buttons
+                      .saving__item.swiper-slide
+                        button.saving__btn.btn.btn--toggle(class=button.isActive ? "is-active" : "", type="button", data-saving-value, data-saving-grows!=button.dataGrows, data-saving-bank!=button.dataBank)!=`${button.value} &euro;`
+                          span!= local.saving.price
+                h2.saving__inner-title.title.title--small!= local.saving.tabs[index].subTitle
+                .saving__value-wrap
+                  p.saving__value.color-accent!=`<span data-saving-grows-value>${item.buttons[1].dataGrows}</span> ${item.valueUnit}`
+                  span.saving__descr!= local.saving.descr
+                span.saving__text!= local.saving.text
+                .saving__value-wrap
+                  p.saving__value.color-red!=`<span data-saving-bank-value>${item.buttons[1].dataBank}</span> ${item.valueUnit}`
+                  span.saving__descr!= local.saving.descr2
+        p.saving__remark!= local.saving.remark1
+          button(class="link" type="button" data-open-modal="calculations")!= local.saving.remark2
+          != local.saving.remark3

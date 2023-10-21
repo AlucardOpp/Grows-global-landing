@@ -1,0 +1,34 @@
+.tabs {
+  margin-top: 50px;
+  max-width: 100%;
+}
+
+.tabs__controls {
+  display: flex;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.tabs__control {
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-right: 40px;
+  opacity: 0.5;
+  min-width: auto;
+  width: 25%;
+
+  &.is-active {
+    opacity: 1;
+    pointer-events: none;
+  }
+}
+
+.tabs__content {
+  margin-bottom: 40px;
+
+  transition: height 0.3s;
+}
+
+.tabs__element {
+  width: 100%;
+}

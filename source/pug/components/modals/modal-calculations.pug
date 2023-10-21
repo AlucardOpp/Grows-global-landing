@@ -1,0 +1,19 @@
+mixin modal-calculations()
+  .modal-calculations
+    h3.modal-calculations__title.title.title--small For the purposes of&nbsp;calculating hypothetical results we&nbsp;use the following annual yield per each asset class:
+    ul.modal-calculations__list
+      li.modal-calculations__item
+        .modal-calculations__name Moonshots
+        .modal-calculations__value 50%
+      li.modal-calculations__item
+        .modal-calculations__name Venture
+        .modal-calculations__value 20%
+      li.modal-calculations__item
+        .modal-calculations__name Stocks
+        .modal-calculations__value 8%
+      li.modal-calculations__item
+        .modal-calculations__name Bonds
+        .modal-calculations__value 2%
+    p.modal-calculations__text The calculations can be&nbsp;seen <a class="link" href="https://docs.google.com/spreadsheets/d/1ImVWqJR-arV33WAFzhNMe1PTbHSJ8Ysuwr-yoB_gItw/edit#gid=1168303112" target="_blank" rel="nooperner">here</a>.
+    p.modal-calculations__descr Actual performance is&nbsp;impossible to&nbsp;predict by&nbsp;nature, especially when it&nbsp;comes to&nbsp;ultra-high-yield assets with short historical track-record, such as&nbsp;Moonshots and Venture. The calculations do&nbsp;not include expenses that the users may carry.
+    +btn({text: "Got it"})(data-close-modal)

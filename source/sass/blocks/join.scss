@@ -1,0 +1,99 @@
+.join {
+  margin-bottom: size(225px);
+
+  @include vp-2399 {
+    margin-bottom: 225px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 57px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title {
+    margin-bottom: size(40px);
+
+    @include vp-2399 {
+      margin-bottom: 40px;
+    }
+
+    @include vp-1919 {
+      margin-bottom: 28px;
+    }
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: size(70px);
+
+    font-size: size(40px);
+    line-height: 95%;
+    text-align: center;
+
+    @include vp-2399 {
+      margin-bottom: 130px;
+
+      font-size: 40px;
+    }
+
+    @include vp-1919 {
+      font-size: 32px;
+    }
+
+    @include vp-767 {
+      width: 80%;
+      font-size: 20px;
+      margin-bottom: 59px;
+    }
+  }
+
+  &__btn {
+    min-width: size(402px);
+
+    @include vp-2399 {
+      min-width: 402px;
+    }
+
+    @include vp-1023 {
+      min-width: 244px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__form {
+    width: 100%;
+  }
+
+  .join-form {
+    padding-right: size(42px);
+
+    @include vp-1023 {
+      display: none;
+    }
+  }
+
+  &__mobile {
+    display: none;
+
+    @include vp-1023 {
+      display: block;
+    }
+  }
+
+  &__caption {
+    margin: 0;
+    font-weight: 700;
+    font-size: size(25px);
+    line-height: 120%;
+    text-align: center;
+
+    @include vp-1023 {
+      font-size: 15px;
+    }
+  }
+}

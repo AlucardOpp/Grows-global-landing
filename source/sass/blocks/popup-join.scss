@@ -1,0 +1,61 @@
+.popup-join {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  padding: size(10px);
+  width: 100%;
+
+  background-color: rgba($color-default-black, 0.8);
+
+  z-index: 999;
+
+  transform: translateY(100%);
+  transition: transform $trans-default;
+
+  @include vp-2399 {
+    padding: 10px;
+  }
+
+  @include vp-1919 {
+    padding: 10px 32px;
+  }
+
+  @include vp-1023 {
+    padding: 5px 24px;
+  }
+
+  @include vp-767 {
+    padding: 0 22px 15px;
+  }
+
+  .join-form .custom-input {
+    @include vp-1919 {
+      max-width: 580px;
+    }
+
+    @include vp-1279 {
+      max-width: 100%;
+    }
+
+    @include vp-767 {
+      margin-bottom: 10px;
+    }
+  }
+
+  .custom-input__error {
+    @include vp-1919 {
+      bottom: size(-28px);
+    }
+  }
+
+  .join-form {
+    @include vp-1919 {
+      max-width: 862px;
+    }
+  }
+
+  &.is-show {
+    transform: translateY(0);
+  }
+}

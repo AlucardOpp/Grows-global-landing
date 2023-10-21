@@ -1,0 +1,23 @@
+mixin autopilot
+  section.autopilot
+    .container.autopilot__wrap
+      h2.autopilot__title.title!= local.autopilot.title
+      p.autopilot__descr!= local.autopilot.descr
+      .autopilot__block
+        .autopilot__video-wrap
+          .autopilot__video
+            video(preload="auto" autoplay muted loop playsinline data-src=`./video/loop.mp4`)
+        .autopilot__content
+          p.autopilot__text!= local.autopilot.block1.text1.el1
+            span(class="mint")!= local.autopilot.block1.text1.el2
+          p.autopilot__text!= local.autopilot.block1.text2
+
+      .autopilot__block.autopilot__block--2
+        .autopilot__content
+          h3.autopilot__title.title.autopilot__title--2!= local.autopilot.block2.subTitle
+          p.autopilot__text!= local.autopilot.block2.text1
+          p.autopilot__text.autopilot__text--desktop!= local.autopilot.block2.text2
+        .autopilot__video-wrap
+          .autopilot__video
+            +picture('content', 'autoplay', 'jpg', 375, 812, 'Let others boost your goals')
+      p.autopilot__text.autopilot__text--mobile!= local.autopilot.text

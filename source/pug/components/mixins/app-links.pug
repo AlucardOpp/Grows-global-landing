@@ -1,0 +1,9 @@
+mixin app-links()
+  section.app-links&attributes(attributes)
+    h2.visually-hidden Links to applications
+    .app-links__wrap
+      a.app-links__link(href="#" aria-label="link to apple store" target="_blank" rel="noopener")
+        +icon("badge-app-store", 200, 65)
+      a.app-links__link(href="#" aria-label="link to google play" target="_blank" rel="noopener")
+        +icon("badge-google-play", 212, 65)
+

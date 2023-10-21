@@ -1,0 +1,8 @@
+mixin join-form()
+  .join-form(data-validate)
+    form(action="#")
+      .join-form__wrap
+        +custom-input({inputType: "email", inputName: "user-email", inputPlaceholder: local.joinForm.placeholderEmail, inputError: local.joinForm.inputError})(data-validate-type="email")
+        .join-form__btn
+          button.btn(type="submit")!= local.joinForm.button
+          p.join-form__caption!= local.joinForm.buttonInfo

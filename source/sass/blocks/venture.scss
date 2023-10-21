@@ -1,0 +1,262 @@
+.venture {
+  padding-bottom: size(100px);
+  margin-bottom: size(300px);
+
+  @include vp-2399 {
+    padding-bottom: 100px;
+    margin-bottom: 300px;
+  }
+
+  @include vp-1919 {
+    padding-bottom: 50px;
+    margin-bottom: 120px;
+  }
+
+  @include vp-1919 {
+    padding-bottom: 40px;
+    margin-bottom: 80px;
+  }
+
+  @include vp-767 {
+    padding-bottom: 30px;
+    margin-bottom: 60px;
+  }
+
+  &__shortcut {
+    margin-bottom: size(92px);
+
+    background-color: $color-light-slate-blue;
+
+    @include vp-2399 {
+      margin-bottom: 92px;
+    }
+
+    @include vp-1919 {
+      margin-bottom: 60px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 size(150px);
+
+    @include vp-2399 {
+      padding: 0 150px;
+    }
+
+    @include vp-1919 {
+      padding: 0 60px;
+    }
+
+    @include vp-767 {
+      padding: 0 22px;
+      margin-bottom: 46px;
+    }
+  }
+
+  .title {
+    max-width: size(1500px);
+    margin-bottom: size(113px);
+
+    line-height: 110%;
+    text-align: center;
+
+    @include vp-2399 {
+      max-width: 1500px;
+      margin-bottom: 113px;
+    }
+
+    @include vp-1919 {
+      max-width: 900px;
+      margin-bottom: 70px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 45px;
+
+      line-height: 100%;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: size(42px) size(68px) size(58px);
+    max-width: size(931px);
+    width: 100%;
+    margin-bottom: size(133px);
+
+    background-color: $color-shark;
+    border: 1px solid $color-corduroy;
+    border-radius: 30px;
+
+    box-shadow: $box-shadow-black;
+
+    @include vp-2399 {
+      padding: 42px 68px 58px;
+      max-width: 931px;
+      margin-bottom: 133px;
+    }
+
+    @include vp-1919 {
+      max-width: 650px;
+      padding: 30px 40px 40px;
+    }
+
+    @include vp-1919 {
+      max-width: 550px;
+      padding: 25px 30px 30px;
+      margin-bottom: 70px;
+    }
+
+    @include vp-767 {
+      max-width: 350px;
+      padding: 20px 19px 29px;
+      margin-bottom: 45px;
+
+      border-radius: 10px;
+    }
+  }
+
+  &__card-number {
+    margin: 0;
+    margin-bottom: size(10px);
+
+    font-weight: 700;
+    font-size: size(100px);
+    line-height: 120%;
+
+    @include vp-2399 {
+      margin-bottom: 10px;
+      font-size: 100px;
+    }
+
+    @include vp-1919 {
+      font-size: 80px;
+    }
+
+    @include vp-1919 {
+      font-size: 60px;
+    }
+
+    @include vp-767 {
+      font-size: 40px;
+    }
+
+    span {
+      font-size: size(80px);
+
+      @include vp-2399 {
+        font-size: 80px;
+      }
+
+      @include vp-1919 {
+        font-size: 60px;
+      }
+
+      @include vp-767 {
+        font-size: 30px;
+      }
+    }
+  }
+
+  &__card-text {
+    margin: 0;
+    max-width: 80%;
+
+    font-weight: 600;
+    font-size: size(30px);
+    line-height: 120%;
+    text-align: center;
+
+    @include vp-2399 {
+      font-size: 30px;
+    }
+
+    @include vp-1919 {
+      max-width: 90%;
+      font-size: 25px;
+    }
+
+    @include vp-1919 {
+      font-size: 20px;
+    }
+
+    @include vp-767 {
+      font-size: 15px;
+      line-height: 100%;
+      max-width: none;
+    }
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: size(128px);
+    max-width: size(1200px);
+
+    font-weight: 600;
+    font-size: size(60px);
+    line-height: 100%;
+    text-align: center;
+
+    @include vp-2399 {
+      margin-bottom: 128px;
+      max-width: 1200px;
+      font-size: 60px;
+    }
+
+    @include vp-1919 {
+      max-width: 800px;
+      font-size: 40px;
+    }
+
+    @include vp-1919 {
+      font-size: 30px;
+    }
+
+    @include vp-767 {
+      max-width: 69%;
+      margin-bottom: 43px;
+
+      font-size: 20px;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    @include vp-767 {
+      max-width: 225px;
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    &:not(:last-of-type) {
+      margin-right: size(135px);
+
+      @include vp-2399 {
+        margin-right: 6%;
+      }
+
+      @include vp-767 {
+        margin-right: 0;
+        margin-bottom: 55px;
+      }
+    }
+  }
+}

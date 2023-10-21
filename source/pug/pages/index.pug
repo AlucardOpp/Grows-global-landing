@@ -1,0 +1,36 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Grows | Save & invest on autopilot into ETFs, venture and web3" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "index.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+  - const local = en
+
+block main
+  main
+    //- на странице запрещен "голый" код
+    //- все блоки вставляются из папки pug/components/blocks
+    +intro()
+    +saving()
+    +graphic(graphic)
+    +moonshots()
+    +venture()
+    +autopilot()
+    +build-grows()
+    +reviews(reviews)
+    +join()
+
+block modals
+  +modal("modal--full-story")(data-modal="full-story")
+    +modal-full-story()
+  +modal("modal--join")(data-modal="join")
+    +modal-join()
+  +modal("modal--success modal--no-scale modal--fit-content")(data-modal="success")
+    +modal-success()
+  +modal("modal--calculations modal--no-scale modal--fit-content")(data-modal="calculations")
+    +modal-calculations()
+  +popup-join()

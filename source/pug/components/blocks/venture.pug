@@ -1,0 +1,20 @@
+mixin venture()
+  section.venture
+    span.venture__shortcut.shortcut!= local.venture.shortcut
+    .venture__wrapper
+      h2.title!= local.venture.title
+      .venture__card
+        p.venture__card-number.color-accent 100<span>x</span>
+        p.venture__card-text!= local.venture.text
+      p.venture__descr!= local.venture.descr.el1
+        br
+        |
+        |
+        span.color-accent!= local.venture.descr.el2
+      ul.venture__list
+        li.venture__item
+          +picture("content", "altair", "png", 486, 134, "altair")
+        li.venture__item
+          +picture("content", "tiger-global", "png", 658, 66, "tiger-global")
+        li.venture__item
+          +picture("content", "target-global", "png", 443, 123, "target-global")

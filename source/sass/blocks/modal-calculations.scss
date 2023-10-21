@@ -1,0 +1,228 @@
+.modal--calculations {
+  .modal__content {
+    max-width: 100%;
+    background-color: transparent;
+
+    @include vp-767 {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+}
+
+.modal-calculations {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: size(1300px);
+  max-width: 100%;
+
+  @include vp-2399 {
+    width: 1300px;
+  }
+
+  @include vp-1919 {
+    width: 1000px;
+  }
+
+  @include vp-1023 {
+    width: 800px;
+  }
+
+  &__title {
+    margin-bottom: size(50px);
+
+    font-weight: 500;
+
+    @include vp-2399 {
+      margin-bottom: 50px;
+    }
+
+    @include vp-1919 {
+      margin-bottom: 40px;
+    }
+
+    @include vp-1023 {
+      margin-bottom: 30px;
+      font-size: 24px;
+    }
+
+    @include vp-767 {
+      margin: 0 10px;
+      margin-bottom: 22px;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: size(110px);
+
+    @include vp-2399 {
+      margin-bottom: 110px;
+    }
+
+    @include vp-1919 {
+      margin-bottom: 80px;
+    }
+
+    @include vp-1023 {
+      margin-bottom: 60px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 45px;
+    }
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: size(105px);
+
+    @include vp-2399 {
+      column-gap: 105px;
+    }
+
+    @include vp-1919 {
+      column-gap: 80px;
+    }
+
+    @include vp-1023 {
+      column-gap: 60px;
+    }
+
+    @include vp-767 {
+      column-gap: 45px;
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: size(25px);
+
+      @include vp-2399 {
+        margin-bottom: 25px;
+      }
+
+      @include vp-1919 {
+        margin-bottom: 15px;
+      }
+
+      @include vp-1023 {
+        margin-bottom: 10px;
+      }
+
+      @include vp-767 {
+        margin-bottom: 2px;
+      }
+    }
+
+    &:first-of-type {
+      color: $color-french-lilac;
+    }
+    &:nth-of-type(2) {
+      color: $color-light-slate-blue;
+    }
+    &:nth-of-type(3) {
+      color: $color-light-blue;
+    }
+    &:last-of-type {
+      color: $color-very-light-grey;
+    }
+  }
+
+  &__name,
+  &__value {
+    text-align: center;
+    font-size: size(30px);
+    font-weight: 700;
+
+    @include vp-2399 {
+      font-size: 30px;
+    }
+
+    @include vp-1919 {
+      font-size: 24px;
+    }
+
+    @include vp-1023 {
+      font-size: 20px;
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+    }
+  }
+
+  &__text,
+  &__descr {
+    width: size(800px);
+    max-width: 100%;
+    margin: 0;
+    margin-bottom: size(30px);
+
+    text-align: center;
+    font-size: size(25px);
+    line-height: 100%;
+
+    @include vp-2399 {
+      width: 800px;
+      margin-bottom: 30px;
+
+      font-size: 25px;
+    }
+
+    @include vp-1919 {
+      margin-bottom: 20px;
+
+      font-size: 20px;
+    }
+
+    @include vp-1023 {
+      font-size: 18px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 15px;
+
+      font-size: 15px;
+    }
+  }
+
+  &__descr {
+    margin-bottom: size(130px);
+
+    @include vp-2399 {
+      margin-bottom: 130px;
+    }
+
+    @include vp-1919 {
+      margin-bottom: 100px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 80px;
+    }
+  }
+
+  .btn {
+    min-width: size(402px);
+    max-width: 100%;
+
+    @include vp-2399 {
+      min-width: 402px;
+    }
+
+    @include vp-1919 {
+      min-width: 300px;
+    }
+
+    @include vp-1023 {
+      min-width: 250px;
+    }
+
+    @include vp-767 {
+      min-width: 196px;
+    }
+  }
+}

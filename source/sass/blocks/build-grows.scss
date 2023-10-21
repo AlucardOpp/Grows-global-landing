@@ -1,0 +1,104 @@
+.build-grows {
+  padding-top: size(225px);
+  padding-bottom: size(346px);
+  line-height: 100%;
+
+  @include vp-1919 {
+    padding-top: 120px;
+    padding-bottom: 200px;
+  }
+
+  @include vp-767 {
+    padding-top: 60px;
+    padding-bottom: 136px;
+  }
+
+  &__title {
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 600;
+    user-select: none;
+
+    @include vp-1919 {
+      max-width: 1200px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    gap: size(16px);
+    grid-template-columns: repeat(3, 1fr);
+    list-style: none;
+    padding-left: 0;
+    margin-top: size(125px);
+    margin-bottom: size(132px);
+
+    @include vp-1919 {
+      margin-top: 70px;
+      margin-bottom: 70px;
+    }
+
+    @include vp-1023 {
+      grid-template-columns: 1fr;
+      gap: 11px;
+    }
+
+    @include vp-767 {
+      margin-top: 40px;
+      margin-bottom: 42px;
+    }
+  }
+
+  &__item {
+    padding: size(52px) size(59px) size(56px);
+    box-shadow: 0px size(4px) size(4px) rgba($color-default-black, 0.25);
+    border: size(1px) solid $color-corduroy;
+    border-radius: size(30px);
+    background-color: $color-shark;
+    text-align: center;
+
+    @include vp-1919 {
+      padding: 25px 30px 30px;
+    }
+
+    @include vp-767 {
+      border-radius: 10px;
+      padding: 19px 17px 24px;
+    }
+  }
+
+  &__item-title {
+    margin: 0;
+    font-weight: 600;
+    font-size: size(40px);
+    line-height: 100%;
+
+    @include vp-1919 {
+      font-size: 30px;
+    }
+
+    @include vp-767 {
+      font-size: 20px;
+    }
+  }
+
+  &__item-text {
+    margin-top: size(36px);
+    margin-bottom: 0;
+    font-size: size(25px);
+    line-height: 100%;
+
+    @include vp-2399 {
+      font-size: 23px;
+    }
+
+    @include vp-1919 {
+      margin-top: 14px;
+      font-size: 18px;
+    }
+
+    @include vp-767 {
+      font-size: 15px;
+    }
+  }
+}

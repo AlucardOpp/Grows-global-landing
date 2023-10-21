@@ -1,0 +1,86 @@
+mixin moonshots()
+  -
+    const items = [
+      {
+        percent: "38,900",
+        iconName: "monero",
+        //- time: "6 years gain",
+        //- title: "Monero",
+      },
+      {
+        percent: "9,965",
+        iconName: "bitcoin",
+        //- time: "6 years gain",
+        //- title: "Bitcoin",
+      },
+      {
+        percent: "9,830",
+        iconName: "mana",
+        //- time: "2 years gain",
+        //- title: "MANA",
+      },
+      {
+        percent: "11,900",
+        iconName: "solana",
+        //- time: "18 months gain",
+        //- title: "Solana",
+      },
+      {
+        percent: "14,600",
+        iconName: "polygon",
+        //- time: "18 months gain",
+        //- title: "Polygon",
+      },
+      {
+        percent: "1,580",
+        iconName: "atom",
+        //- time: "2 years gain",
+        //- title: "Atom",
+      },
+      {
+        percent: "3,450",
+        iconName: "waves",
+        //- time: "3 months gain",
+        //- title: "Waves",
+      },
+      {
+        percent: "7,670",
+        iconName: "sandbox",
+        //- time: "18 months gain",
+        //- title: "The Sandbox",
+      },
+      {
+        percent: "3,990",
+        iconName: "network",
+        //- time: "2 years gain",
+        //- title: "Theta",
+      },
+      {
+        percent: "8,840",
+        iconName: "infinity",
+        //- time: "1 year gain",
+        //- title: "Axie Infinity",
+      },
+    ]
+  section.moonshots
+    span.moonshots__shortcut.shortcut!= local.moonshots.shortcut
+    .moonshots__wrapper
+      h2.title!= local.moonshots.title
+      .swiper.moonshots__slider
+        .swiper-wrapper.moonshots__slider-wrap
+          each item, index in items
+            .swiper-slide.moonshots__slide
+              .moonshots__item
+                span.moonshots__percent!= `+${item.percent}%`
+                span.moonshots__time!= local.moonshots.slider[index].time
+                .moonshots__chevrone
+                  +icon("icon-chevron", 50, 28)
+                .moonshots__image
+                  +picture("slides/moonshots", item.iconName, "png", 136, 136, item.iconName)
+                span.moonshots__name!= local.moonshots.slider[index].title
+        span.moonshots__slider-text!= local.moonshots.sliderText
+      p.moonshots__descr!= local.moonshots.descr.el1
+        span(class="color-red")!= local.moonshots.descr.el2
+        br
+        != local.moonshots.descr.el3
+        span(class="color-accent")!= local.moonshots.descr.el4

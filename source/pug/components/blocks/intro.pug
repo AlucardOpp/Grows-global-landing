@@ -1,0 +1,21 @@
+mixin intro()
+  .intro
+    //- вставлять блоки во внешний контейнер неверно
+    //- все блоки содержат в себе container без доп класса tutorial__wrapper
+    .intro__bg
+      +picture('content', 'intro-bg', 'jpg', 2600, 1852, 'intro-bg')
+    .intro__wrap.container
+      .intro__content
+        .intro__logo
+          +icon('logo', 115, 135)
+          span!= local.intro.logoText
+        .intro__title!= local.intro.title
+          span!= local.intro.textAccent
+        .intro__text!= local.intro.text
+        .intro__form
+          +join-form()
+          .intro__mobile
+            a(href="#", data-open-modal="join").intro__btn.btn!= local.intro.button
+            p.intro__caption!= local.intro.buttonInfo
+      //- .intro__img
+        +picture('content', 'intro-phone', 'png', 522, 1098, 'intro-phone')

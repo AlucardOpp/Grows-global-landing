@@ -1,0 +1,1128 @@
+.graphic {
+  margin-bottom: size(218px);
+
+  @include vp-2399 {
+    margin-bottom: 218px;
+  }
+
+  @include vp-1919 {
+    margin-bottom: 160px;
+  }
+
+  @include vp-1919 {
+    margin-bottom: 140px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 123px;
+  }
+
+  & .container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__tabs {
+    padding-top: size(2px);
+    margin-top: size(-2px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+    overflow: visible;
+
+    @include vp-2399 {
+      padding-top: 2px;
+      margin-top: 2px;
+    }
+
+    @include vp-1919 {
+      overflow: visible;
+    }
+
+    @include vp-1919 {
+      max-width: 1128px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__title {
+    margin-bottom: size(28px);
+    max-width: size(1110px);
+
+    @include vp-2399 {
+      margin-bottom: 28px;
+      max-width: 1110px;
+    }
+
+    @include vp-1919 {
+      margin-bottom: 20px;
+    }
+
+    // @include vp-1023 {
+    //   font-size: 59px;
+    // }
+
+    @include vp-767 {
+      max-width: calc(100% - 85px);
+      margin-bottom: 17px;
+    }
+
+    & br {
+      display: none;
+
+      @include vp-767 {
+        display: inline;
+        vertical-align: baseline;
+      }
+    }
+
+    & a {
+      // display: inline-block;
+      position: relative;
+      transition: opacity $trans-default;
+      // box-shadow: inset 0 size(-2px) 0 0 currentColor;
+      // background-image: linear-gradient(to top, transparent 0px, transparent #{size(10px)}, $color-default-white #{size(10px)}, $color-default-white #{size(13px)}, transparent #{size(13px)}, transparent 100%);
+      text-decoration: underline;
+
+      // @include vp-1023 {
+        // background-image: linear-gradient(to top, transparent 0px, transparent 8px, $color-default-white 8px, $color-default-white 10px, transparent 10px, transparent 100%);
+      // }
+
+      @include hover {
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+
+  &__description {
+    max-width: size(1000px);
+    font-weight: 500;
+    font-size: size(40px);
+    line-height: 100%;
+    margin: 0 0 size(40px) 0;
+    text-align: center;
+
+    @include vp-2399 {
+      max-width: 1000px;
+      font-size: 40px;
+      margin: 0 0 40px 0;
+    }
+
+    @include vp-1919 {
+      font-size: 35px;
+      margin-bottom: 30px;
+    }
+
+    @include vp-1919 {
+      font-size: 28px;
+    }
+
+    @include vp-1023 {
+      font-size: 24px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 40px;
+      font-size: 20px;
+    }
+
+    & br {
+      &:first-of-type {
+        display: none;
+
+        @include vp-767 {
+          display: inline;
+          vertical-align: baseline;
+        }
+      }
+
+      &:last-of-type {
+        display: none;
+
+        @include vp-767 {
+          display: inline;
+          vertical-align: baseline;
+        }
+      }
+    }
+
+    & a {
+      position: relative;
+      transition: opacity $trans-default;
+      text-decoration: underline;
+      // background-image: linear-gradient(to top, transparent 0px, transparent 6px, $color-default-white 6px, $color-default-white 7px, transparent 7px, transparent 100%);
+
+      @include hover {
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+
+    & span {
+      font-weight: 600;
+      color: $color-magic-mint;
+    }
+  }
+
+  &__info {
+    max-width: size(950px);
+    font-weight: 500;
+    font-size: size(40px);
+    line-height: 100%;
+    margin: 0 0 size(56px) 0;
+    text-align: center;
+
+    @include vp-2399 {
+      max-width: 950px;
+      font-size: 40px;
+      margin: 0 0 56px 0;
+    }
+
+    @include vp-1919 {
+      font-size: 35px;
+      margin-bottom: 40px;
+    }
+
+    @include vp-1919 {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+
+    @include vp-1023 {
+      font-size: 24px;
+    }
+
+    @include vp-767 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      max-width: calc(100% - 32px);
+    }
+  }
+
+  &__points {
+    list-style: none;
+    margin: size(-17px) 0 size(22px) 0;
+    padding: 0;
+    width: size(23px);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    @include vp-2399 {
+      margin: -17px 0 22px 0;
+      width: 23px;
+    }
+
+    @include vp-1919 {
+      width: 20px;
+      margin: -15px 0 20px 0;
+    }
+
+    @include vp-767 {
+      width: 11px;
+      margin: -8px 0 8px 0;
+    }
+  }
+
+  &__point {
+    width: size(23px);
+    height: size(23px);
+    border-radius: 50%;
+    background-color: $color-silver;
+    margin-top: size(17px);
+
+    @include vp-2399 {
+      width: 23px;
+      height: 23px;
+      margin-top: 17px;
+    }
+
+    @include vp-1919 {
+      width: 20px;
+      height: 20px;
+      margin-top: 15px;
+    }
+
+    @include vp-1919 {
+      width: 16px;
+      height: 16px;
+      margin-top: 10px;
+    }
+
+    @include vp-767 {
+      width: 11px;
+      height: 11px;
+      margin-top: 8px;
+    }
+
+    &--10 {
+      opacity: 0.1;
+    }
+
+    &--20 {
+      opacity: 0.2;
+    }
+
+    &--30 {
+      opacity: 0.3;
+    }
+
+    &--40 {
+      opacity: 0.4;
+    }
+
+    &--50 {
+      opacity: 0.5;
+    }
+
+    &--60 {
+      opacity: 0.6;
+    }
+
+    &--70 {
+      opacity: 0.7;
+    }
+  }
+
+  &__subtitle {
+    max-width: size(1000px);
+    margin-bottom: size(24px);
+
+    @include vp-2399 {
+      max-width: 1000px;
+      margin-bottom: 24px;
+    }
+
+    @include vp-1919 {
+      margin-bottom: 20px;
+    }
+
+    @include vp-767 {
+      max-width: calc(100% - 85px);
+      margin-bottom: 17px;
+    }
+  }
+
+  &__subdescription {
+    max-width: size(910px);
+    font-weight: 500;
+    font-size: size(40px);
+    line-height: 100%;
+    margin: 0 0 size(86px) 0;
+    text-align: center;
+
+    @include vp-2399 {
+      max-width: 910px;
+      font-size: 40px;
+      margin: 0 0 86px 0;
+    }
+
+    @include vp-1919 {
+      max-width: 640px;
+      font-size: 35px;
+      margin-bottom: 70px;
+    }
+
+    @include vp-1919 {
+      font-size: 28px;
+      margin-bottom: 40px;
+    }
+
+    @include vp-1023 {
+      font-size: 24px;
+    }
+
+    @include vp-767 {
+      font-size: 20px;
+      margin-bottom: 20px;
+      max-width: calc(100% - 17px);
+    }
+  }
+
+  &__items {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 size(105px) 0;
+    display: flex;
+    flex-wrap: wrap;
+    counter-reset: fieldsCounter var(--length);
+
+    @include vp-2399 {
+      padding: 0 0 105px 0;
+    }
+
+    @include vp-1919 {
+      padding-bottom: 85px;
+      flex-wrap: nowrap;
+      width: fit-content;
+    }
+
+    @include vp-767 {
+      margin-left: 0;
+      padding-bottom: 90px;
+    }
+  }
+
+  &__item {
+    transition: border $trans-default, opacity $trans-default, outline-color $trans-default;
+    width: size(59px);
+    height: size(300px);
+    opacity: 0.6;
+    position: relative;
+    border-radius: size(5px);
+    cursor: pointer;
+
+    @include vp-2399 {
+      width: 59px;
+      height: 300px;
+      border-radius: 5px;
+    }
+
+    @include vp-1919 {
+      width: 37px;
+      height: 250px;
+    }
+
+    @include vp-1023 {
+      height: 200px;
+      width: 37px;
+    }
+
+    @include vp-767 {
+      height: 152px;
+      width: 30px;
+      border-radius: 2px;
+    }
+
+    &:first-of-type {
+      margin-left: size(5px);
+
+      @include vp-2399 {
+        margin-left: 5px;
+      }
+
+      @include vp-1919 {
+        margin-left: 32px;
+      }
+
+      @include vp-1023 {
+        margin-left: 40px;
+      }
+
+      @include vp-767 {
+        margin-left: 22px;
+      }
+    }
+
+    &:last-of-type {
+      @include vp-1919 {
+        margin-right: 40px;
+      }
+
+      @include vp-1919 {
+        margin-right: 32px;
+      }
+
+      @include vp-1023 {
+        margin-right: 40px;
+      }
+
+      @include vp-767 {
+        margin-right: 22px;
+      }
+    }
+
+    &:not(:last-of-type) {
+      margin-right: size(4px);
+
+      @include vp-2399 {
+        margin-right: 4px;
+      }
+
+      @include vp-767 {
+        margin-right: 2px;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $color-transparent;
+      border: size(4px) solid $color-transparent;
+      border-radius: size(5px);
+      transition: border-color $trans-default;
+      pointer-events: none;
+
+      @include vp-2399 {
+        border: 4px solid $color-transparent;
+        border-radius: 5px;
+      }
+
+      @include vp-767 {
+        border: 2px solid $color-transparent;
+        border-radius: 2px;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      counter-increment: fieldsCounter -1;
+      content: counter(fieldsCounter, decimal);
+      font-size: size(16px);
+      line-height: 100%;
+      bottom: size(-27px);
+      left: 50%;
+      transform: translateX(-50%);
+      font-weight: 500;
+
+      @include vp-2399 {
+        font-size: 16px;
+        bottom: -27px;
+      }
+
+      @include vp-767 {
+        font-size: 12px;
+        bottom: -23px;
+      }
+    }
+
+    @include hover {
+      opacity: 0.8;
+    }
+
+    &.is-active {
+      pointer-events: none;
+      opacity: 1;
+
+      @include hover {
+        opacity: 1;
+      }
+
+      &::before {
+        border-color: rgba($color-default-white, 1);
+      }
+
+      &::after {
+        font-size: size(20px);
+        font-weight: 700;
+        bottom: size(-30px);
+
+        @include vp-2399 {
+          font-size: 20px;
+          bottom: -30px;
+        }
+
+        @include vp-767 {
+          font-weight: 600;
+          font-size: 15px;
+          bottom: -24px;
+        }
+      }
+    }
+  }
+
+  &__field {
+    transition: opacity $trans-default;
+    border-radius: size(5px);
+    height: 0;
+    width: 100%;
+
+    @include vp-2399 {
+      border-radius: 5px;
+    }
+
+    @include vp-767 {
+      border-radius: 2px;
+    }
+
+    &--moonshots {
+      background-color: $color-french-lilac;
+    }
+
+    &--venture {
+      background-color: $color-light-slate-blue;
+    }
+
+    &--stocks {
+      background-color: $color-light-blue;
+    }
+
+    &--bonds {
+      background-color: $color-very-light-grey;
+    }
+
+    &--cash {
+      background-color: $color-default-white;
+      font-size: size(40px);
+      line-height: 120%;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include vp-2399 {
+        font-size: 40px;
+      }
+
+      @include vp-1919 {
+        font-size: 30px;
+      }
+
+      @include vp-1919 {
+        font-size: 24px;
+      }
+
+      @include vp-1919 {
+        font-size: 16px;
+      }
+
+      @include vp-767 {
+        font-size: 20px;
+      }
+    }
+
+    &.h {
+      &-10 {
+        height: 10%;
+      }
+
+      &-20 {
+        height: 20%;
+      }
+
+      &-30 {
+        height: 30%;
+      }
+
+      &-40 {
+        height: 40%;
+      }
+
+      &-50 {
+        height: 50%;
+      }
+
+      &-60 {
+        height: 60%;
+      }
+
+      &-70 {
+        height: 70%;
+      }
+
+      &-80 {
+        height: 80%;
+      }
+
+      &-90 {
+        height: 90%;
+      }
+
+      &-100 {
+        height: 100%;
+      }
+    }
+  }
+
+  &__content {
+    margin-bottom: 0;
+    min-height: size(405px);
+
+    @include vp-2399 {
+      min-height: 405px;
+    }
+
+    @include vp-1919 {
+      min-height: 335px;
+      width: calc(100% + 64px);
+      margin-left: -32px;
+      margin-right: -32px;
+      padding-right: 32px;
+    }
+
+    @include vp-1023 {
+      min-height: 285px;
+      width: calc(100% + 80px);
+      margin-left: -40px;
+      margin-right: -40px;
+      padding-right: 40px;
+    }
+
+    @include vp-767 {
+      min-height: 242px;
+      width: calc(100% + 44px);
+      margin-left: -22px;
+      margin-right: -22px;
+      padding-right: 22px;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-bottom: size(20px);
+    margin-bottom: size(17px);
+
+    @include vp-2399 {
+      padding-bottom: 20px;
+      margin-bottom: 17px;
+    }
+
+    @include vp-1023 {
+      flex-wrap: nowrap;
+    }
+
+    @include vp-767 {
+      margin-bottom: 12px;
+      padding-bottom: 13px;
+    }
+  }
+
+  &__goal {
+    font-weight: 500;
+    font-size: size(16px);
+    line-height: 100%;
+    color: $color-default-white;
+    position: absolute;
+    right: size(-222px);
+    top: size(141px);
+
+    @include vp-2399 {
+      font-size: 16px;
+      right: -222px;
+      top: 141px;
+    }
+
+    @include vp-1919 {
+      // top: 117px;
+      // right: -59px;
+      top: 117px;
+      right: -142px;
+    }
+
+    @include vp-1439 {
+      display: none;
+    }
+  }
+
+  &__slider-controls {
+    margin-left: 0;
+    margin-right: 0;
+    overflow: visible;
+  }
+
+  &__controls-wrapper {
+    @include vp-1023 {
+      width: calc(100% + 72px);
+      margin-left: -24px;
+      margin-right: -24px;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    @include vp-767 {
+      width: calc(100% + 66px);
+      margin-left: -22px;
+      margin-right: -22px;
+      padding-left: 22px;
+      padding-right: 22px;
+    }
+  }
+
+  &__control {
+    font-size: size(25px);
+    transform: translateZ(0);
+    min-width: size(198px);
+    justify-content: center;
+    padding: size(10px) size(29px);
+    width: auto;
+    height: auto;
+
+    @include vp-2399 {
+      font-size: 25px;
+      min-width: 198px;
+      padding: 10px 29px;
+    }
+
+    @include vp-1919 {
+      min-width: 178px;
+      padding: 8px 23px;
+    }
+
+    @include vp-1919 {
+      min-width: 155px;
+      padding: 7px 20px;
+      font-size: 16px;
+    }
+
+    @include vp-767 {
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 120%;
+      padding: 12px 15px 7px;
+      min-width: 84px;
+      max-height: 35px;
+    }
+
+    &.is-active {
+      font-weight: 600;
+    }
+
+    &:first-of-type {
+      margin-left: size(6px);
+
+      @include vp-2399 {
+        margin-left: 6px;
+      }
+
+      @include vp-1919 {
+        margin-left: 0;
+      }
+    }
+
+    &:last-of-type {
+      margin-right: 30px;
+    }
+
+    &:not(:last-of-type) {
+      margin-right: size(15px);
+
+      @include vp-2399 {
+        margin-right: 15px;
+      }
+
+      @include vp-1919 {
+        margin-right: 10px;
+      }
+
+      @include vp-1919 {
+        margin-right: 7px;
+      }
+
+      @include vp-1023 {
+        margin-right: 5px;
+      }
+
+      @include vp-767 {
+        margin-right: 4px;
+      }
+    }
+  }
+
+  &__interests {
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: size(16px);
+
+    @include vp-2399 {
+      row-gap: 16px;
+    }
+
+    @include vp-1919 {
+      max-width: 1128px;
+      align-self: center;
+      row-gap: 10px;
+    }
+
+    @include vp-767 {
+      row-gap: 11px;
+    }
+  }
+
+  &__interest {
+    display: grid;
+    grid-template-columns: size(35px) 1fr;
+    column-gap: size(11px);
+    align-items: flex-end;
+
+    @include vp-2399 {
+      grid-template-columns: 35px 1fr;
+      column-gap: 11px;
+    }
+
+    @include vp-1919 {
+      align-items: center;
+      column-gap: 20px;
+    }
+
+    @include vp-767 {
+      column-gap: 13px;
+    }
+  }
+
+  &__square {
+    display: block;
+    width: size(35px);
+    height: size(35px);
+    background-color: $color-default-white;
+    border-radius: size(5px);
+
+    @include vp-2399 {
+      width: 35px;
+      height: 35px;
+      border-radius: 5px;
+    }
+
+    @include vp-767 {
+      height: 45px;
+    }
+
+    &--moonshots {
+      background-color: $color-french-lilac;
+    }
+
+    &--venture {
+      background-color: $color-light-slate-blue;
+    }
+
+    &--stocks {
+      background-color: $color-light-blue;
+    }
+
+    &--bonds {
+      background-color: $color-very-light-grey;
+    }
+  }
+
+  &__interest-name {
+    font-size: size(30px);
+    font-weight: 700;
+    line-height: 100%;
+    display: inline;
+
+    &--moonshots {
+      @include vp-767 {
+        color: $color-french-lilac;
+      }
+    }
+
+    &--venture {
+      @include vp-767 {
+        color: $color-light-slate-blue;
+      }
+    }
+
+    &--stocks {
+      @include vp-767 {
+        color: $color-light-blue;
+      }
+    }
+
+    &--bonds {
+      @include vp-767 {
+        color: $color-very-light-grey;
+      }
+    }
+
+    @include vp-2399 {
+      font-size: 30px;
+    }
+
+    @include vp-1919 {
+      font-size: 24px;
+    }
+
+    @include vp-1919 {
+      font-size: 18px;
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 110%;
+      margin: 0 0 4px 0;
+    }
+  }
+
+  &__dot {
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  &__percent-wrap {
+    display: inline-block;
+    min-width: size(75px);
+
+    @include vp-1919 {
+      min-width: 60px;
+    }
+
+    @include vp-767 {
+      min-width: auto;
+    }
+  }
+
+  &__percent-description {
+    font-size: size(25px);
+    font-weight: 500;
+    line-height: 100%;
+    margin: 0;
+    display: inline;
+
+    @include vp-2399 {
+      font-size: 24px;
+    }
+
+    @include vp-1919 {
+      font-size: 20px;
+    }
+
+    @include vp-1919 {
+      font-size: 16px;
+    }
+
+    @include vp-767 {
+      font-size: 13px;
+      line-height: 110%;
+    }
+  }
+
+  &__text-content {
+    color: $color-default-white;
+
+    @include vp-767 {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__remaining {
+    position: absolute;
+    color: $color-default-white;
+    font-weight: 500;
+    font-size: size(16px);
+    line-height: 100%;
+    bottom: size(44px);
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: size(323px);
+
+    @include vp-2399 {
+      font-size: 16px;
+      bottom: 44px;
+    }
+
+    @include vp-1919 {
+      bottom: 22px;
+    }
+
+    @include vp-767 {
+      font-size: 12px;
+      min-width: 227px;
+      bottom: 42px;
+    }
+  }
+
+  &__swiper-button {
+    width: size(65px);
+    height: size(65px);
+    background-color: rgba($color-default-white, 0.7);
+    border-radius: 50%;
+    transition: opacity $trans-default;
+    top: size(100px);
+    margin-top: 0;
+    -webkit-tap-highlight-color: $color-transparent;
+    outline: none;
+
+    @include vp-2399 {
+      width: 65px;
+      height: 65px;
+      top: 100px;
+    }
+
+    @include vp-1919 {
+      width: 50px;
+      height: 50px;
+    }
+
+    @include vp-1023 {
+      top: 75px;
+    }
+
+    @include vp-767 {
+      width: 40px;
+      height: 40px;
+      top: 56px;
+    }
+
+    & svg {
+      width: size(26px);
+      height: size(24px);
+
+      @include vp-2399 {
+        width: 26px;
+        height: 24px;
+      }
+
+      @include vp-1919 {
+        width: 20px;
+        height: 18px;
+      }
+
+      @include vp-767 {
+        width: 17px;
+        height: 16px;
+      }
+    }
+
+    &::after {
+      display: none;
+    }
+
+    @include hover {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    &--prev {
+      left: size(25px);
+
+      @include vp-2399 {
+        left: 25px;
+      }
+
+      @include vp-1023 {
+        left: 15px;
+      }
+
+      @include vp-767 {
+        left: 3px;
+      }
+    }
+
+    &--next {
+      right: size(25px);
+
+      @include vp-2399 {
+        right: 25px;
+      }
+
+      @include vp-1023 {
+        right: 15px;
+      }
+
+      @include vp-767 {
+        right: 3px;
+      }
+    }
+  }
+}

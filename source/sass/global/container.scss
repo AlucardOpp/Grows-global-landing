@@ -1,0 +1,25 @@
+.container {
+  width: 100%;
+  max-width: calc(#{size(1324px)} + #{size(40px)} * 2);
+  margin: 0 auto;
+  padding: 0 size(40px);
+
+  @include vp-2399 {
+  max-width: calc(1324px + 40px * 2);
+  padding: 0 40px;
+  }
+
+  @include vp-1919 {
+    padding: 0 60px;
+    // max-width: calc(1024px + 60px * 2);
+    max-width: 1024px;
+  }
+
+  @include vp-1023 {
+    padding: 0 40px;
+  }
+
+  @include vp-767 {
+    padding: 0 22px;
+  }
+}

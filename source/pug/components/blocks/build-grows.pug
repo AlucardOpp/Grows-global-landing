@@ -1,0 +1,23 @@
+mixin build-grows
+  section.build-grows
+    .container
+      h2.title.build-grows__title!= local.buildGrows.title
+      ul.build-grows__list
+        li.build-grows__item
+          h3.build-grows__item-title!= local.buildGrows.list[0].subTitle
+          p.build-grows__item-text!= local.buildGrows.list[0].text
+        li.build-grows__item
+          h3.build-grows__item-title!= local.buildGrows.list[1].subTitle
+          p.build-grows__item-text!= local.buildGrows.list[0].text
+        li.build-grows__item
+          h3.build-grows__item-title!= local.buildGrows.list[2].subTitle
+          p.build-grows__item-text!= local.buildGrows.list[0].text
+      .build-card
+        p.build-card__title.build-card__title--name!= local.buildGrows.buildCard.text1
+        p.build-card__title!= local.buildGrows.buildCard.text2
+        p.build-card__text!= local.buildGrows.buildCard.text3
+        p.build-card__text!= local.buildGrows.buildCard.text4
+        a.build-card__link(href="#fullstory", data-open-modal="full-story")!= local.buildGrows.buildCard.link
+        .build-card__img
+          img(data-src='./img/content/build-grows', data-type="jpg", width="1292", height="681", alt="build-grows")
+          //- +img('content', 'build-grows', 'jpg', 1292, 681, 'Dmitrii Samoilovskikh')

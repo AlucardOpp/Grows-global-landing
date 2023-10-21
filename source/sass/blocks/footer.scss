@@ -1,0 +1,126 @@
+.footer {
+  padding-top: size(62px);
+  padding-bottom: calc(#{size(45px)} + #{size(183px)});
+  background-color: $color-black-russian;
+
+  @include vp-2399 {
+    padding-top: 62px;
+    padding-bottom: calc(150px);
+  }
+
+  @include vp-1023 {
+    padding-bottom: calc(150px);
+  }
+
+  @include vp-767 {
+    padding-top: 45px;
+    padding-bottom: calc(77px);
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: size(50px);
+    width: 100%;
+
+    text-align: center;
+    user-select: none;
+    font-weight: 600;
+    font-size: size(30px);
+    line-height: 110%;
+
+    @include vp-767 {
+      margin-bottom: 50px;
+
+      font-size: 20px;
+    }
+  }
+
+  &__socials {
+    // margin-bottom: size(60px);
+
+    // @include vp-2399 {
+    //   margin-bottom: 60px;
+    // }
+
+    // @include vp-767 {
+    //   margin-bottom: 30px;
+    // }
+    margin-bottom: size(65px);
+
+    @include vp-2399 {
+      margin-bottom: 101px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 35px;
+    }
+  }
+
+  // &__store {
+  //   margin-bottom: size(43px);
+
+  //   @include vp-2399 {
+  //     margin-bottom: 43px;
+  //   }
+
+  //   @include vp-767 {
+  //     margin-bottom: 55px;
+  //   }
+  // }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: size(25px);
+    opacity: 0.4;
+
+    font-weight: 500;
+    font-size: size(15px);
+    line-height: 154%;
+
+    @include vp-2399 {
+      margin-bottom: 43px;
+
+      font-size: 15px;
+    }
+
+    @include vp-767 {
+      margin: 0 7px 22px;
+
+      font-size: 13px;
+    }
+
+    @include vp-374 {
+      margin: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__copy {
+    align-self: flex-start;
+    opacity: 0.4;
+
+    font-weight: 500;
+    font-size: size(15px);
+    line-height: 150%;
+
+    @include vp-2399 {
+      font-size: 15px;
+    }
+
+    @include vp-767 {
+      margin: 0 7px;
+
+      font-size: 13px;
+    }
+
+    @include vp-374 {
+      margin: 0;
+    }
+  }
+}

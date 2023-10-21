@@ -1,0 +1,21 @@
+mixin reviews(data)
+  section.reviews
+    h2.title.reviews__title!= local.reviews.title
+    .reviews__slider.swiper
+      .reviews__list.swiper-wrapper
+        each item, index in data
+          .reviews__item.swiper-slide
+            .reviews__item-content
+              .reviews__avatar
+                +picture("content/reviews", `reviews-avatar-${item.avatar}`, "png", 92, 105, item.reviewer)
+              ul.reviews__stars
+                - for (let i = 0; i < item.stars; i++)
+                    li.reviews__star.reviews__star--desktop
+                      +icon("icon-star", 49, 49)
+                    li.reviews__star.reviews__star--mobile
+                      +icon("icon-star-mobile", 15, 15)
+              p.reviews__review!= local.reviews.list[index].text
+      .reviews__swiper-button.reviews__swiper-button--prev.swiper-button-prev
+        +icon("icon-arrow-left", 26, 24)
+      .reviews__swiper-button.reviews__swiper-button--next.swiper-button-next
+        +icon("icon-arrow-right", 26, 24)

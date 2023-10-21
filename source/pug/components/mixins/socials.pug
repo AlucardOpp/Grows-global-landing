@@ -1,0 +1,22 @@
+mixin socials(list)
+  -
+    const socials = [
+      {
+        icon: "mail",
+        url: "mailto:d@grows.global",
+        alt: "Send email"
+      },
+      {
+        icon: "telegram-white",
+        url: "https://t.me/growsteam",
+        alt: "Telegram"
+      }
+    ]
+  - const socialList = list || socials
+  section.socials&attributes(attributes)
+    h2.visually-hidden Socials
+    ul.socials__list
+      each social in socialList
+        li.socials__item(class=`socials__item--${social.icon}`)
+          a.socials__link(href=`${social.url}` aria-label=`${social.alt}` target="_blank" rel="noopener")
+            +icon(`icon-${social.icon}`, 63, 63)

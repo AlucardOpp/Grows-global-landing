@@ -1,0 +1,253 @@
+.autopilot {
+  padding-top: size(90px);
+  padding-bottom: size(210px);
+
+  @include vp-1919 {
+    padding-top: 70px;
+    padding-bottom: 140px;
+  }
+
+  @include vp-1023 {
+    padding-top: 60px;
+    padding-bottom: 100px;
+  }
+
+  @include vp-767 {
+    padding-top: 43px;
+    padding-bottom: 80px;
+  }
+
+  &__title {
+    max-width: size(1000px);
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    // font-weight: 600;
+    // font-size: size(80px);
+    // line-height: 100%;
+    text-align: center;
+
+    &--2 {
+      margin-bottom: 74px;
+      text-align: left;
+
+      @include vp-1919 {
+        max-width: 360px;
+        margin-left: 0;
+      }
+
+      @include vp-767 {
+        margin-bottom: 14px;
+        text-align: center;
+      }
+    }
+  }
+
+  &__descr {
+    max-width: size(850px);
+    margin-top: size(31px);
+    margin-bottom: size(164px);
+    margin-left: auto;
+    margin-right: auto;
+    // font-weight: 600;
+    font-size: size(40px);
+    line-height: 100%;
+    text-align: center;
+
+    @include vp-1919 {
+      margin-bottom: 100px;
+      font-size: 30px;
+    }
+
+    @include vp-1919 {
+      max-width: 500px;
+      margin-bottom: 70px;
+      font-size: 25px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 55px;
+      margin-top: 15px;
+      font-size: 20px;
+    }
+  }
+
+  &__block {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: size(253px);
+
+    @include vp-1919 {
+      gap: 100px;
+    }
+
+    @include vp-767 {
+      grid-template-columns: 1fr;
+      gap: 61px;
+      padding: 0 10px;
+    }
+
+    &--2 {
+      padding-right: size(90px);
+      margin-top: size(330px);
+      gap: size(210px);
+
+      @include vp-1919 {
+        padding-right: 0;
+        margin-top: 150px;
+        gap: 100px;
+      }
+
+      @include vp-1023 {
+        margin-top: 100px;
+      }
+
+      @include vp-767 {
+        gap: 32px;
+        margin-top: 149px;
+      }
+
+      .autopilot__content {
+        max-width: size(640px);
+        padding-top: size(76px);
+
+        @include vp-1023 {
+          padding-top: 20px;
+        }
+
+        @include vp-767 {
+          max-width: 300px;
+          padding-top: 0;
+          // padding-top: 0;
+          // max-width: none;
+        }
+      }
+
+      .autopilot__video-wrap {
+        margin-left: auto;
+      }
+    }
+  }
+
+  &__content {
+    padding-top: size(158px);
+    padding-right: size(10px);
+
+    @include vp-1919 {
+      padding-right: 0;
+    }
+
+    // @include vp-1919 {
+    //   padding-top: 100px;
+    // }
+
+    @include vp-767 {
+      padding-top: 0;
+      max-width: 280px;
+      margin: 0 auto;
+    }
+  }
+
+  &__video-wrap {
+    align-self: center;
+    width: size(393px);
+    border: size(8px) solid $color-black-russian-4;
+    box-shadow: 0 size(4px) size(4px) rgba($color-default-black, 0.51);
+    border-radius: size(30px);
+    overflow: hidden;
+
+    @include vp-1919 {
+      width: 300px;
+    }
+
+    @include vp-1023 {
+      width: 250px;
+    }
+
+    @include vp-767 {
+      width: 100%;
+      max-width: 287px;
+      margin: 0 auto;
+      // padding: 0 23px;
+    }
+  }
+
+  &__video {
+    width: 100%;
+    height: 0;
+    padding-bottom: calc(812 / 375 * 100%);
+    position: relative;
+
+    @include vp-767 {
+      width: 100%;
+      border-width: 6px;
+    }
+
+    video,
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-position: center center;
+      z-index: -1;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    font-size: size(50px);
+    line-height: 100%;
+
+    @include vp-1919 {
+      max-width: 380px;
+      font-size: 30px;
+    }
+
+    @include vp-1023 {
+      font-size: 30px;
+    }
+
+    @include vp-767 {
+      font-size: 20px;
+      text-align: center;
+    }
+
+    & ~ & {
+      margin-top: size(50px);
+
+      @include vp-1919 {
+        margin-top: 40px;
+      }
+
+      @include vp-1023 {
+        margin-top: 30px;
+      }
+
+      @include vp-767 {
+        margin-top: 20px;
+      }
+    }
+
+    &--desktop {
+      @include vp-767 {
+        display: none;
+      }
+    }
+
+    &--mobile {
+      display: none;
+
+      @include vp-767 {
+        display: block;
+        margin-top: 38px;
+        padding: 0 10px;
+      }
+    }
+  }
+
+  .mint {
+    color: $color-magic-mint;
+  }
+}

@@ -1,0 +1,13 @@
+mixin join()
+  section.join
+    .container
+      h2.title!= local.join.title
+      p.join__descr
+        != local.join.descr.el1
+        br
+        != local.join.descr.el2
+      .join__form
+        +join-form()
+        .intro__mobile
+          button.join__btn.btn(type="button", data-open-modal="join")!= local.join.formButton
+          p.intro__caption!= local.join.formText

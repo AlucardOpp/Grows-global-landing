@@ -1,0 +1,61 @@
+.socials {
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__item {
+    &:not(:last-of-type) {
+      margin-right: size(15px);
+
+      @include vp-2399 {
+        margin-right: 15px;
+      }
+
+      @include vp-767 {
+        margin-right: 11px;
+      }
+    }
+
+    &--messenger-black {
+      display: none;
+
+      @include vp-767 {
+        display: block;
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: size(63px);
+    height: size(63px);
+    background-color: $color-transparent;
+    padding: 0;
+    cursor: pointer;
+    border: none;
+
+    transition: opacity $trans-default;
+    transform: translateZ(0);
+
+    @include vp-767 {
+      width: 50px;
+      height: 50px;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include hover {
+      opacity: 0.8;
+    }
+  }
+}

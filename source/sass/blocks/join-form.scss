@@ -1,0 +1,135 @@
+.join-form {
+  width: 100%;
+
+  &__wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: size(40px) 0;
+
+    @include vp-1919 {
+      padding: 10px 0 0 0;
+    }
+
+    @include vp-767 {
+      flex-direction: column;
+      padding-bottom: 0;
+    }
+  }
+
+  .custom-input {
+    padding: 0;
+    margin-right: size(36px);
+    // width: size(663px);
+    width: size(808px);
+
+    @include vp-2399 {
+      margin-right: 36px;
+      // width: 663px;
+      width: 808px;
+    }
+
+    @include vp-1919 {
+      // padding: 20px 0;
+      margin-right: 10px;
+      width: auto;
+      flex-grow: 1;
+    }
+
+    @include vp-767 {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 25px;
+      padding-bottom: 12px;
+    }
+
+    &__error {
+      @include vp-767 {
+        bottom: -6px;
+      }
+    }
+
+    input {
+      @include vp-1919 {
+        padding: 11px 35px;
+
+        font-size: 24px;
+      }
+
+      @include vp-1919 {
+        padding: 15px 30px;
+
+        font-size: 19px;
+      }
+
+      @include vp-767 {
+        padding: 12px 20px;
+
+        font-size: 15px;
+      }
+    }
+  }
+
+  &__btn {
+    @include vp-767 {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+
+  .btn {
+    margin: 0 0 size(24px) 0;
+    width: size(402px);
+    white-space: nowrap;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    @include vp-2399 {
+      width: 402px;
+    }
+
+    @include vp-1919 {
+      margin: 0 0 16px 0;
+      padding: 16px 56px;
+      width: auto;
+      max-width: 280px;
+      font-size: 20px;
+    }
+
+    // @include vp-1023 {
+    //   width: auto;
+    // }
+
+    @include vp-767 {
+      width: 100%;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      margin: 0 0 12px 0;
+      font-size: 16px;
+      max-width: 100%;
+    }
+  }
+
+  &__caption {
+    margin: 0;
+    font-weight: 700;
+    font-size: size(22px);
+    line-height: 120%;
+    text-align: center;
+
+    @include vp-1919 {
+      font-size: 17px;
+    }
+
+    @include vp-1439 {
+      font-size: 16px;
+    }
+
+    @include vp-767 {
+      font-size: 15px;
+    }
+  }
+}

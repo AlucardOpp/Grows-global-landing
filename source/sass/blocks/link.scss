@@ -1,0 +1,17 @@
+.link {
+  position: relative;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: inherit;
+  text-decoration: underline;
+  line-height: inherit;
+  transition: opacity $trans-default;
+
+  @include hover {
+    opacity: 0.8;
+  }
+}

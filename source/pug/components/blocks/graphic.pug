@@ -1,0 +1,101 @@
+mixin graphic(data)
+  section.graphic
+    .container
+      h2.title.graphic__title!= local.graphic.title.el1
+        a(target="_blank" rel="noopener noreferrer" href="https://spinup-000d1a-wp-offload-media.s3.amazonaws.com/faculty/wp-content/uploads/sites/8/2020/12/Diversification-Across-Time.pdf" aria-label= local.graphic.label)!= local.graphic.title.el2
+      p.graphic__description
+        a(target="_blank" rel="noopener noreferrer" href="https://spinup-000d1a-wp-offload-media.s3.amazonaws.com/faculty/wp-content/uploads/sites/8/2020/12/Diversification-Across-Time.pdf" aria-label="Go to the journal")!= local.graphic.text.el1
+        br
+        != local.graphic.text.el2
+        br
+        span!= local.graphic.text.el3
+        br
+        != local.graphic.text.el4
+
+      span.graphic__info!= local.graphic.info
+      ul.graphic__points
+        li.graphic__point.graphic__point--10
+        li.graphic__point.graphic__point--20
+        li.graphic__point.graphic__point--30
+        li.graphic__point.graphic__point--40
+        li.graphic__point.graphic__point--50
+        li.graphic__point.graphic__point--60
+        li.graphic__point.graphic__point--70
+      p.title.graphic__subtitle!= local.graphic.subtitle
+      p.graphic__subdescription!= local.graphic.subdescription
+      .graphic__tabs.tabs(data-tabs="parent" data-height="max")
+        .graphic__controls-wrapper
+          .graphic__slider-controls.swiper
+            .graphic__controls.tabs__controls.swiper-wrapper(data-tabs="controls")
+              each item, index in data
+                button.graphic__control.btn.btn--toggle.swiper-slide(data-tabs="control" data-type="button" aria-label="Toggle item" class=(item.title === "Smart") ? "is-active" : "")!= local.graphic.controls[index].btn
+        .graphic__content.tabs__content(data-tabs="content")
+          each item in data
+            .graphic__element.tabs__element.is-active(data-tabs="element" class=(item.title === "Smart") ? "is-active" : "")
+              .graphic__slider.swiper
+                .graphic__items.swiper-wrapper(style="--length: 21")
+                  - for (let i = item.items.length - 1; i >= 0; i--)
+                      .graphic__item.swiper-slide(data-moonshots=item.items[i].moonshots, data-venture=item.items[i].venture, data-stocks=item.items[i].stocks, data-bonds=item.items[i].bonds, data-cash = 0, class=(i === 9) ? "is-active" : "")
+                          .graphic__field.graphic__field--moonshots(class=`h-${item.items[i].moonshots}`)
+                          .graphic__field.graphic__field--venture(class=`h-${item.items[i].venture}`)
+                          .graphic__field.graphic__field--stocks(class=`h-${item.items[i].stocks}`)
+                          .graphic__field.graphic__field--bonds(class=`h-${item.items[i].bonds}`)
+                  .graphic__item.swiper-slide(data-moonshots=0, data-venture=0, data-stocks=0, data-bonds=0, data-cash = 100)
+                    .graphic__field.graphic__field--cash.h-100!="🎉"
+                .graphic__swiper-button.graphic__swiper-button--prev.swiper-button-prev
+                  +icon("icon-arrow-left", 26, 24)
+                .graphic__swiper-button.graphic__swiper-button--next.swiper-button-next
+                  +icon("icon-arrow-right", 26, 24)
+          .graphic__remaining!= local.graphic.remaining
+          .graphic__goal!= local.graphic.goal
+      ul.graphic__interests
+        li.graphic__interest
+          span.graphic__square.graphic__square--moonshots
+          .graphic__text-content
+            p.graphic__interest-name.graphic__interest-name--moonshots
+              span.graphic__percent-wrap
+                span.graphic__percent.graphic__percent--moonshots!="30"
+                | %
+              != local.graphic.percent[0].text
+              span.graphic__dot!="."
+            p.graphic__percent-description!= local.graphic.description1
+        li.graphic__interest
+          span.graphic__square.graphic__square--venture
+          .graphic__text-content
+            p.graphic__interest-name.graphic__interest-name--venture
+              span.graphic__percent-wrap
+                span.graphic__percent.graphic__percent--venture!="30"
+                | %
+              != local.graphic.percent[1].text
+              span.graphic__dot!="."
+            p.graphic__percent-description!= local.graphic.description2
+        li.graphic__interest
+          span.graphic__square.graphic__square--stocks
+          .graphic__text-content
+            p.graphic__interest-name.graphic__interest-name--stocks
+              span.graphic__percent-wrap
+                span.graphic__percent.graphic__percent--stocks!="30"
+                | %
+              != local.graphic.percent[2].text
+              span.graphic__dot!="."
+            p.graphic__percent-description!= local.graphic.description3
+        li.graphic__interest
+          span.graphic__square.graphic__square--bonds
+          .graphic__text-content
+            p.graphic__interest-name.graphic__interest-name--bonds
+              span.graphic__percent-wrap
+                span.graphic__percent.graphic__percent--bonds!="10"
+                | %
+              != local.graphic.percent[3].text
+              span.graphic__dot!="."
+            p.graphic__percent-description!= local.graphic.description4
+        li.graphic__interest
+          span.graphic__square
+          .graphic__text-content
+            p.graphic__interest-name
+              span.graphic__percent-wrap
+                span.graphic__percent.graphic__percent--cash!="0"
+                | %
+              != local.graphic.percent[4].text
+              span.graphic__dot!="."
+            p.graphic__percent-description!= local.graphic.description5

@@ -1,0 +1,35 @@
+mixin modal-success()
+  .modal-success
+    span.modal-success__title 🎊We’ve added you
+      |
+      | to&nbsp;the&nbsp;waitlist 🎉
+    p.modal-success__text 463 people ahead of you
+    .modal-success__referral.referral
+      h3.referral__title Get priority access 🔥
+      p.referral__text Share your link to&nbsp;jump&nbsp;over&nbsp;the&nbsp;line:
+      .referral__copy-link( data-copy-text="button")
+        .referral__copied ✅ Link copied
+        a.referral__copy-text.link(href="https://grows.global", target="_blank", data-copy-text="text") grows.ai/i/fsdp50
+        button.referral__copy-btn(type="button", aria-label="copy link")
+          +icon("icon-copy", 27, 36)
+      //- span.referral__share Share it&nbsp;with your friends:
+      section.socials.referral__socials
+        h2.visually-hidden Socials
+        ul.socials__list
+          li.socials__item(class=`socials__item--facebook-black`)
+            button.socials__link(aria-label="Facebook link" data-sharer="facebook" data-title="Here is my Grows invitation. It allows to automatically save and invest small amounts into smart-portfolios of bond, stock, venture and moonshots. Check this out!" data-url="https://grows.global")
+              +icon(`icon-facebook-black`, 63, 63)
+          li.socials__item(class=`socials__item--telegram-black`)
+            button.socials__link(aria-label="Telegram link" data-sharer="telegram" data-title="Here is my Grows invitation. It allows to automatically save and invest small amounts into smart-portfolios of bond, stock, venture and moonshots. Check this out!" data-url="https://grows.global")
+              +icon(`icon-telegram-black`, 63, 63)
+          li.socials__item(class=`socials__item--whatsapp-black`)
+            button.socials__link(aria-label="Whatsapp link" data-sharer="whatsapp" data-title="Here is my Grows invitation. It allows to automatically save and invest small amounts into smart-portfolios of bond, stock, venture and moonshots. Check this out!" data-url="https://grows.global")
+              +icon(`icon-whatsapp-black`, 63, 63)
+          li.socials__item(class=`socials__item--twitter-black`)
+            button.socials__link(aria-label="Twitter link" data-sharer="twitter" data-title="Here is my Grows invitation. It allows to automatically save and invest small amounts into smart-portfolios of bond, stock, venture and moonshots. Check this out!" data-url="https://grows.global")
+              +icon(`icon-twitter-black`, 63, 63)
+          li.socials__item(class=`socials__item--messenger-black`)
+            a.socials__link(href="https://www.messenger.com/" aria-label="Facebook messenger link")
+              +icon(`icon-messenger-black`, 63, 63)
+    p.modal-success__descr.modal-success__descr--desk The more friends that join, the sooner you will get access
+    p.modal-success__descr.modal-success__descr--mob TThe reward will be deposited to your account at Grows when you complete registration using the same email — 5 € per each your invitee who also completes registration and makes the first deposit for any amount at any point of time.

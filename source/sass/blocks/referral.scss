@@ -1,0 +1,296 @@
+.referral {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: size(62px) size(30px) size(56px);
+  width: size(919px);
+  max-width: 100%;
+
+  background: $color-vulcan;
+  border: 1px solid $color-corduroy;
+  border-radius: 30px;
+
+  @include vp-2399 {
+    padding: 62px 30px 68px;
+  }
+
+  @include vp-1919 {
+    width: 600px;
+    padding: 40px 25px;
+
+    border-radius: 25px;
+  }
+
+  @include vp-1919 {
+    max-width: 100%;
+    padding: 39px 19px 30px 19px;
+
+    border-radius: 15px;
+  }
+
+  @include vp-374 {
+    padding: 25px 15px;
+  }
+
+  &.success {
+    .referral__copied {
+      opacity: 1;
+    }
+  }
+
+  .socials__link {
+    width: size(80px);
+    height: size(80px);
+
+    @include vp-2399 {
+      width: 80px;
+      height: 80px;
+    }
+
+    @include vp-1919 {
+      width: 60px;
+      height: 60px;
+    }
+
+    @include vp-1919 {
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  .socials__item {
+    &:not(:last-of-type) {
+      margin-right: 0;
+
+      @include vp-2399 {
+        margin-right: 0;
+      }
+
+      @include vp-1919 {
+        margin-right: 0;
+      }
+
+      @include vp-767 {
+        margin-right: 14px;
+      }
+    }
+
+    &:not(:nth-last-of-type(2)) {
+      margin-right: size(47px);
+
+      @include vp-2399 {
+        margin-right: 47px;
+      }
+
+      @include vp-1919 {
+        margin-right: 14px;
+      }
+
+      @include vp-767 {
+        margin-right: 14px;
+      }
+    }
+
+    &:last-of-type {
+      @include vp-767 {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: size(76px);
+
+    font-size: size(50px);
+    line-height: 100%;
+    font-weight: 600;
+
+    @include vp-2399 {
+      margin-bottom: 30px;
+
+      font-size: 50px;
+    }
+
+    @include vp-1919 {
+      margin-bottom: 20px;
+
+      font-size: 30px;
+    }
+
+    @include vp-1919 {
+      margin-bottom: 32px;
+
+      font-size: 25px;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: size(40px);
+    width: 100%;
+
+    text-align: center;
+    font-size: size(40px);
+    line-height: 100%;
+    font-weight: 500;
+    color: $color-light-grey-2;
+
+    @include vp-2399 {
+      margin-bottom: 40px;
+
+      font-size: 40px;
+    }
+
+    @include vp-1919 {
+      margin-bottom: 30px;
+
+      font-size: 24px;
+    }
+
+    @include vp-1919 {
+      width: 100%;
+      margin-bottom: 20px;
+
+      font-size: 20px;
+    }
+  }
+
+  &__copy-link {
+    display: flex;
+    align-items: center;
+    margin-bottom: size(118px);
+    margin-right: size(-50px);
+
+    @include vp-2399 {
+      margin-bottom: 40px;
+      margin-right: -50px;
+    }
+
+    @include vp-1919 {
+      margin-right: -35px;
+      margin-bottom: 68px;
+    }
+  }
+
+  &__copy-text {
+    font-size: size(40px);
+    line-height: 100%;
+    font-weight: 600;
+    color: $color-light-grey-2;
+
+    @include vp-2399 {
+      font-size: 40px;
+    }
+
+    @include vp-1919 {
+      font-size: 24px;
+    }
+
+    @include vp-1919 {
+      font-size: 20px;
+    }
+  }
+
+  &__copied {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    height: size(30px);
+    pointer-events: none;
+
+    font-weight: 500;
+    font-size: size(40px);
+    color: $color-light-grey-2;
+
+    transform: translate3d(-50%, #{size(60px), 0});
+
+    transition: opacity $trans-600;
+
+    @include vp-2399 {
+      height: 30px;
+      font-size: 40px;
+    }
+
+    @include vp-1919 {
+      font-size: 24px;
+    }
+
+    @include vp-1919 {
+      font-size: 14px;
+
+      transform: translate(-50%, -15px);
+    }
+  }
+
+  &__copy-btn {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    margin-left: size(20px);
+    cursor: pointer;
+
+    color: $color-light-grey-2;
+
+    transform: translateZ(0);
+    transition: opacity $trans-default;
+
+    @include vp-2399 {
+      margin-left: 20px;
+    }
+
+    @include vp-1919 {
+      width: 30px;
+      height: 30px;
+      margin-left: 15px;
+    }
+
+    @include vp-1919 {
+      width: 20px;
+      height: 20px;
+      margin-left: 14px;
+    }
+
+    @include hover {
+      opacity: 0.8;
+    }
+
+    svg {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  &__share {
+    margin-bottom: size(37px);
+
+    font-size: size(40px);
+    line-height: 100%;
+    color: $color-default-white;
+    font-weight: 600;
+    text-align: center;
+
+    @include vp-2399 {
+      margin-bottom: 37px;
+
+      font-size: 40px;
+    }
+
+    @include vp-1919 {
+      margin-bottom: 24px;
+
+      font-size: 24px;
+    }
+
+    @include vp-1919 {
+      margin-bottom: 22px;
+
+      font-size: 20px;
+    }
+  }
+}

@@ -1,0 +1,370 @@
+.saving {
+  margin-bottom: size(237px);
+
+  @include vp-2399 {
+    margin-bottom: 237px;
+  }
+
+  @include vp-1919 {
+    margin-bottom: 170px;
+  }
+
+  @include vp-1439 {
+    margin-bottom: 144px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title {
+    @include vp-767 {
+      width: 80%;
+    }
+
+    @include vp-374 {
+      width: 100%;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    @include vp-374 {
+      padding: 0;
+    }
+  }
+
+  &__tabs {
+    width: 100%;
+    margin-top: size(65px);
+    overflow: visible;
+
+    @include vp-2399 {
+      margin-top: 65px;
+    }
+
+    @include vp-1439 {
+      margin-top: 40px;
+    }
+
+    @include vp-767 {
+      margin-top: 26px;
+    }
+  }
+
+  &__controls {
+    justify-content: center;
+    margin-bottom: size(22px);
+
+    @include vp-2399 {
+      margin-bottom: 22px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__control {
+    min-width: size(334px);
+    justify-content: center;
+    padding: size(10px) size(20px);
+
+    font-size: size(25px);
+
+    @include vp-2399 {
+      min-width: 334px;
+      padding: 10px 20px;
+
+      font-size: 25px;
+    }
+
+    @include vp-1919 {
+      min-width: 240px;
+      font-size: 18px;
+    }
+
+    @include vp-767 {
+      min-width: auto;
+      width: 100%;
+      flex-grow: 1;
+      padding: 11px 8px;
+      font-size: 12px;
+    }
+
+    @include vp-374 {
+      font-size: 10px;
+    }
+
+    &:not(:last-of-type) {
+      margin-right: size(9px);
+
+      @include vp-2399 {
+        margin-right: 9px;
+      }
+
+      @include vp-767 {
+        margin-right: 4px;
+      }
+    }
+  }
+
+  &__content {
+    margin-bottom: size(74px);
+
+    @include vp-2399 {
+      margin-bottom: 74px;
+    }
+
+    @include vp-1919 {
+      margin-bottom: 48px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include vp-767 {
+      align-items: flex-start;
+    }
+  }
+
+  &__slider {
+    width: size(1020px);
+    max-width: 100%;
+    margin-bottom: size(73px);
+    overflow: visible;
+
+    @include vp-2399 {
+      width: 1020px;
+      margin-bottom: 73px;
+    }
+
+    @include vp-1919 {
+      width: 800px;
+      margin-bottom: 48px;
+    }
+
+    @include vp-1439 {
+      margin-bottom: 40px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__slider-wrapper {
+    display: flex;
+  }
+
+  &__item {
+    width: auto;
+    flex-grow: 1;
+    flex-shrink: 0;
+
+    &:not(:last-of-type) {
+      margin-right: size(10px);
+
+      @include vp-2399 {
+        margin-right: 10px;
+      }
+
+      @include vp-767 {
+        margin-right: 4px;
+      }
+    }
+  }
+
+  &__btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: size(15px);
+    padding-bottom: size(15px);
+
+    line-height: 90%;
+
+    @include vp-2399 {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+
+    @include vp-2399 {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+
+    @include vp-767 {
+      padding: 10px 8px 7px;
+
+      line-height: 93%;
+    }
+
+    span {
+      font-size: size(20px);
+      font-weight: 500;
+
+      @include vp-2399 {
+        font-size: 20px;
+      }
+
+      @include vp-1919 {
+        font-size: 16px;
+      }
+
+      @include vp-767 {
+        font-size: 10px;
+      }
+    }
+  }
+
+  &__inner-title {
+    margin-bottom: size(17px);
+
+    @include vp-2399 {
+      margin-bottom: 17px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 0;
+      text-align: left;
+    }
+  }
+
+  &__value-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: size(30px) 0;
+
+    @include vp-2399 {
+      margin: 30px 0;
+    }
+
+    @include vp-1919 {
+      margin: 24px 0;
+    }
+
+    @include vp-1919 {
+      margin: 20px 0;
+    }
+
+    @include vp-767 {
+      margin: 17px 0;
+      align-items: flex-start;
+    }
+  }
+
+  &__value {
+    margin: 0;
+    margin-bottom: size(-10px);
+
+    font-weight: 600;
+    font-size: size(60px);
+    line-height: 120%;
+
+    @include vp-2399 {
+      font-size: 60px;
+    }
+
+    @include vp-1919 {
+      margin-bottom: -6px;
+
+      font-size: 48px;
+    }
+
+    @include vp-1439 {
+      font-size: 40px;
+    }
+
+    @include vp-767 {
+      margin-bottom: -4px;
+
+      font-size: 30px;
+    }
+  }
+
+  &__descr {
+    font-size: size(35px);
+    line-height: 120%;
+
+    @include vp-2399 {
+      font-size: 35px;
+    }
+
+    @include vp-1919 {
+      font-size: 24px;
+    }
+
+    @include vp-767 {
+      font-size: 15px;
+    }
+  }
+
+  &__text {
+    font-size: size(40px);
+    line-height: 100%;
+
+    @include vp-2399 {
+      font-size: 40px;
+    }
+
+    @include vp-1919 {
+      font-size: 32px;
+    }
+
+    @include vp-1439 {
+      font-size: 26px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 4px;
+
+      font-size: 20px;
+    }
+  }
+
+  &__remark {
+    margin: 0;
+    width: size(800px);
+    max-width: 100%;
+
+    text-align: center;
+    font-size: size(25px);
+    line-height: 100%;
+    color: $color-light-grey-2;
+
+    @include vp-2399 {
+      width: 800px;
+      font-size: 25px;
+    }
+
+    @include vp-1919 {
+      width: 600px;
+
+      font-size: 18px;
+    }
+
+    @include vp-767 {
+      width: auto;
+      margin-right: 10%;
+
+      text-align: left;
+      font-size: 12px;
+    }
+  }
+}
